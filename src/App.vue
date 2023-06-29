@@ -1,19 +1,36 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import NavigationBar from "./components/NavigationBar.vue";
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div style="margin-right: 15px">
+      <img alt="Vue logo" class="logo rounded-full h-15 w-15" src="https://avatars.githubusercontent.com/u/18107626?v=4" width="125" height="125" />
+      <div style="margin-top: 25px" class="mt-6 mb-6 lg:mb-0 mx-auto md:text-center sm:text-center relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[1024px] lg:mt-0">
+        <div class="flex space-x-1">
+          <a href="https://www.linkedin.com/in/josie-darang/" target="_blank" rel="noopener noreferrer">
+          <span class="socialbtn text-[#0072b1]">
+               <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+          </span>
+          </a>
+          <a href="https://github.com/MarJose123" target="_blank" rel="noopener noreferrer">
+          <span class="socialbtn text-[#0072b1]">
+               <font-awesome-icon icon="fa-brands fa-github" />
+          </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Hi, I'm Josie Darang." />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">About</RouterLink>
+        <RouterLink to="/experience">Experience</RouterLink>
+        <RouterLink to="/certification">Certification</RouterLink>
       </nav>
     </div>
   </header>

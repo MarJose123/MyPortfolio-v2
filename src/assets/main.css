@@ -1,4 +1,7 @@
 @import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #app {
   max-width: 1280px;
@@ -12,6 +15,12 @@ a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+a,
+.tex-blue {
+  text-decoration: none;
+  color: hsl(208, 46%, 53%);
   transition: 0.4s;
 }
 
@@ -32,4 +41,31 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+.socialbtn {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 246 246 / var(--tw-bg-opacity));
+  --tw-gradient-from: #0e2f5c;
+  --tw-gradient-to: rgb(250 82 82 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socialbtn:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .socialbtn {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 36 37 / var(--tw-bg-opacity));
 }
